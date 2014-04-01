@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vanillin Unit Tests</title>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <script type="text/javascript" src="../src/Array.js"></script>
+        <script type="text/javascript" src="../src/Document.js"></script>
+        <script type="text/javascript" src="../src/Element.js"></script>
+        <script type="text/javascript" src="../src/HTTPRequest.js"></script>
+        <script type="text/javascript" src="../src/NodeList.js"></script>
+        <script type="text/javascript" src="../src/Object.js"></script>
+        
+        <script type="text/javascript" src="../src/polyfill/window.getComputedStyle.js"></script>
+        
+        <script type="text/javascript" src="../node_modules/es5-shim/es5-shim.min.js"></script>
+        <script type="text/javascript" src="../node_modules/es5-shim/es5-sham.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.14.0.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css">
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        
+        <script type="text/javascript">
+            var fixture = document.getElementById("qunit-fixture");
+            
+            // IE8
+            var CompromiseNodeList = (typeof StaticNodeList == "undefined") ? NodeList : StaticNodeList;
+        </script>
+        <script type="text/javascript" src="tests/Array.js"></script>
+        <script type="text/javascript" src="tests/Document.js"></script>
+        <script type="text/javascript" src="tests/Element.js"></script>
+        <script type="text/javascript" src="tests/HTTPRequest.js"></script>
+        <script type="text/javascript" src="tests/NodeList.js"></script>
+        <script type="text/javascript" src="tests/Object.js"></script>
+    </body>
+</html>
